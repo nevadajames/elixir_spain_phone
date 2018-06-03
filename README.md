@@ -3,21 +3,21 @@
 Elixir package for validating Spanish Phone numbers for length, format, and type. Also finds
 province for valid landlines.  
 Available Methods:
-´´´
+```elixir
 phone_number = '937226615'
 
 ElixirSpainPhone.find_province(phone_number)
-=> :barcelona
+:barcelona
 
 ElixirSpainPhone.valid?(phone_number)
-=> true
+true
 
 ElixirSpainPhone.phone_type(phone_number)
-=> 'mobile'
-´´´
+"mobile"
+```
 The PhoneGenerator module can be used to generate random, valid Spanish phone numbers. After requiring the module call:
 
-´´´
+```elixir
 PhoneGenerator.generate_toll_free
 "800229664"
 
@@ -25,11 +25,11 @@ PhoneGenerator.generate_premium
 "902293916"
 
 PhoneGenerator.generate_mobile
-=> "651715399"
+"651715399"
 
 PhoneGenerator.generate_landline
-=> "951487492"
-´´´
+"951487492"
+```
 
 ## Installation
 
