@@ -13,7 +13,7 @@ ElixirSpainPhone.valid?(phone_number)
 true
 
 ElixirSpainPhone.phone_type(phone_number)
-"mobile"
+"landline"
 ```
 The PhoneGenerator module can be used to generate random, valid Spanish phone numbers. After requiring the module call:
 
