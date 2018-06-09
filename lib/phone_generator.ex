@@ -9,7 +9,7 @@ defmodule PhoneGenerator do
     Enum.map(1..length, fn _i -> :rand.uniform(9) end) |> Enum.join()
   end
 
-  def generate_landline do
+  def generate(:landline) do
     require AreaCode
     area_code = AreaCode.codes_by_province
     |> Map.values
@@ -19,15 +19,15 @@ defmodule PhoneGenerator do
     Enum.join([area_code, extension(6)])
   end
 
-  def generate_mobile do
+  def generate(:mobile) do
     join_number([6,7], 8)
   end
 
-  def generate_toll_free do
+  def generate(:toll_free) do
     join_number([900, 800], 6)
   end
 
-  def generate_premium do
+  def generate(:premium) do
     join_number([902, 802], 6)
   end
 
