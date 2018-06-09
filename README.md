@@ -7,7 +7,7 @@ Available Methods:
 phone_number = '937226615'
 
 ElixirSpainPhone.find_province(phone_number)
-:barcelona
+[:barcelona]
 
 ElixirSpainPhone.valid?(phone_number)
 true
@@ -18,16 +18,16 @@ ElixirSpainPhone.phone_type(phone_number)
 The PhoneGenerator module can be used to generate random, valid Spanish phone numbers. After requiring the module call:
 
 ```elixir
-PhoneGenerator.generate_toll_free
+PhoneGenerator.generate(:toll_free)
 "800229664"
 
-PhoneGenerator.generate_premium
+PhoneGenerator.generate(:premium)
 "902293916"
 
-PhoneGenerator.generate_mobile
+PhoneGenerator.generate(:mobile)
 "651715399"
 
-PhoneGenerator.generate_landline
+PhoneGenerator.generate(:landline)
 "951487492"
 ```
 
