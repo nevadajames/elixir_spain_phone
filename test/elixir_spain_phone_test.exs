@@ -12,7 +12,8 @@ defmodule ElixirSpainPhoneTest do
     landline_number = "934253521"
     assert ElixirSpainPhone.valid?(landline_number) == true
     assert ElixirSpainPhone.phone_type(landline_number) == "landline"
-    assert ElixirSpainPhone.find_province(landline_number) == [:barcelona]
+    assert ElixirSpainPhone.find_province(landline_number) == :barcelona
+    assert is_atom ElixirSpainPhone.find_province(landline_number) 
   end
 
   test "generate landline phone" do
