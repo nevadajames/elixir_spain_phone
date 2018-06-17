@@ -2,10 +2,16 @@ defmodule PhoneGenerator do
   @moduledoc """
     Generates valid Spanish phone number of different types:
     mobile, landline, premium, or toll free.
-    Call generate with type passed as an atom, i.e. generate(:mobile).
     PhoneValidator.find_province(1) can also be called on the generated landlines.
   """
 
+  @doc """
+    ## Available arguments for generate/1
+    - generate(:mobile)
+    - generate(:landline)
+    - generate(:premium)
+    - generate(:toll_free)
+  """
   @spec generate(atom) :: String.t
   def generate(:landline) do
     require AreaCode
